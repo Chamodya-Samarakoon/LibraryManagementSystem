@@ -1,9 +1,7 @@
 package com.example.library.repository;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
 import com.example.library.model.Book;
-import java.util.List;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface BookRepository extends MongoRepository<Book, String> {
-    List<Book> findByPublicationYear(int publicationYear);
 }

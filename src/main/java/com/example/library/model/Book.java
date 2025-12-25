@@ -1,3 +1,4 @@
+
 package com.example.library.model;
 
 import org.springframework.data.annotation.Id;
@@ -7,10 +8,21 @@ import lombok.Data;
 @Data
 @Document(collection = "books")
 public class Book {
+
     @Id
     private String id;
     private String title;
     private String author;
-    private String genre;
-    private int publicationYear;
+    private int year;
+
+    public Book() {
+    }
+
+    public Book(String title, String author, int year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+
+    // getters & setters
 }
